@@ -1,0 +1,22 @@
+Feature: Avaliação escolar
+
+	Scenario Outline: testar valores inválidos
+
+		Given que quero testar valroes inválidos
+		When eu informar os valores inválidos <nota> e <nota2> e <faltas> e <cargaHoraria>
+		Then o sistema reporta uma eceção do tipo DadosInvalidosException
+		
+		Examples:
+		|nota1|nota2|faltas|cargaHoraria|
+		|-1.0|0.0|17|64|
+		|0.0|-1.0|17|64|
+		|0.0|0.0|-1|64|
+		|0.0|0.0|16|-64|
+		|11.0|10.0|16|64|
+		|10.0|11.0|16|64|
+		|10.0|10.0|65|64|
+
+Scenario Outline: testar reprovação por falta
+		Given que quero testar reprovação por falta
+		When eu informar os valores invalidos <nota> e <nota2> e <faltas> e <cargaHoraria>, cuja quantidade de faltas supera o limite permitido
+		Then o sistema informa que o aluno foi reprovado por falta.

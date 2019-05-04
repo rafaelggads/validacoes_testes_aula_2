@@ -1,0 +1,6 @@
+Os códigos deste projeto constam do livro-tutorial: JUnit Tutorial. Publicado por TutorialsPoint 
+
+Este livro está no arquivo junit_tutorial
+
+Este arquivo está na seguinte pasta: /media/gilmario/SAMSUNG/Dropbox/ebook/teste-de-Software/unit-test/junit
+
